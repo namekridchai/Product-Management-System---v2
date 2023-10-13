@@ -42,7 +42,7 @@ app.post('/products', async(req, res) => {
     catch(err){
         res.status(500).send(err);
     }
-    res.status(201).send({...newProduct,id:id}); 
+    res.status(201).send({...newProduct}); 
     id++;
   });
 app.delete('/products/:id', async(req, res) => {
